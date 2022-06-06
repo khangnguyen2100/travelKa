@@ -1,0 +1,30 @@
+.slider {
+  width: 100%;
+  margin-top: 50px;
+}
+.swiper {
+  width: 100%;
+  height: 250px;
+}
+.swiper-slide {
+  width: calc(33.333% - 40px);
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+.swiper-slide .destination-info h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.swiper-slide .destination-info {
+  font-weight: 300;
+  font-size: 14px;
+}
+.slider .heading {
+  font-size: 30px;
+  font-weight: 600;
+  
+}

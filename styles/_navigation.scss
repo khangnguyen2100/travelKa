@@ -1,0 +1,77 @@
+.nav-wrapper {
+  width: 100%;
+  max-width: 100%;
+
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all .3s ease;
+}
+.nav-wrapper.active {
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 0;
+  transition: all .3s ease;
+  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  width: 100%;
+}
+
+.nav-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item{
+
+}
+.nav-item:not(:last-child){
+  margin-right: 65px;
+}
+.nav-link{
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all .25s ease;
+  position: relative;
+}
+.nav-link:hover {
+  transition: all .25s ease;
+  color : $heading-color;
+}
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  background-color : $heading-color;
+  transition: all .2s ease-in-out;
+  height: 4px;
+}
+.nav-link:hover::before {
+  transition: all .2s ease-in-out;
+  width: 100%;
+}
+
+@include repons(1024px) {
+  
+}
+@include repons(768px) {
+  .nav-list {
+    display: none;
+  }
+}
+@include repons(480px) {
+
+}

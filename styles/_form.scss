@@ -1,0 +1,157 @@
+.container-form {
+  height: 100vh;
+  width: 100%;
+  background-color: #F4D03F;
+  background-image: linear-gradient(132deg, #978b5b 0%, #16A085 100%);
+
+}
+
+.bg-blur {
+  background-image: linear-gradient(105deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 50%, transparent 50%),url(../images/nat-10.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  max-height: 80%;
+  max-width: 90%;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 20%);
+  overflow: hidden;
+}
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  max-width: 40%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+
+  padding-top: 30px;
+  padding-left: 70px;
+
+}
+.heading-form {
+  font-size: 36px;
+  color : $heading-color;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.form-group {
+
+}
+.form-group:not(:last-child) {
+  margin-bottom: 25px;
+  width: 100%;
+}
+.form-group label {
+  color : $text-color;
+}
+.form-group input {
+  margin-top: 10px;
+  border-radius: 5px;
+
+  width: 100%;
+  border : 0;
+  padding: 10px 15px;
+  color : $heading-color;
+  background-color: #fff;
+  transition: all .2s ease;
+  border: 1px solid transparent;
+}
+.form-group input:focus {
+  transition: all .2s ease;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 1px solid $primary-color;
+}
+.sign-up {
+  width: 100%;
+}
+.sign-up .heading-form {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0;
+  font-family:'Roboto' serif;
+}
+.btn-form {
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all .3s ease;
+}
+.btn-bg-form {
+  color : #fff;
+  background-color: $primary-color;
+  border: 0;
+  border: 1px solid transparent;
+}
+.btn-bg-form a {
+  display: block;
+}
+.btn-bg-form:hover {
+  color : $primary-color;
+  background-color: transparent;
+  transition: all .3s ease;
+  border: 1px solid $primary-color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn-trans-form {
+  background-color: transparent;
+  color : $heading-color;
+  border: 1px solid $heading-color;
+}
+.btn-trans-form:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+@media screen and (max-width: 970px) {
+  .bg-blur {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,.6) 100%),url(../images/nat-10.jpg);
+    max-height: 90%;
+    max-width: 90%;
+  }
+  .form {
+    max-width: 80%;
+    max-height: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .form-group label {
+    color: #fff;
+  }
+  .heading-form {
+    color : $primary-color
+  }
+  .btn-trans-form {
+    border: 1px solid $primary-color;
+    color : $primary-color;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bg-blur {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .form {
+    padding: 0 20px;
+    max-width: 100%;
+    padding-top: 20px;
+  }
+}
