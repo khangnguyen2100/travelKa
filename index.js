@@ -1,6 +1,3 @@
-if(location.pathname == '/index.html') {
-  AOS.init();
-}
 const destinations = [
   {
     id : 1,
@@ -92,7 +89,7 @@ window.addEventListener('scroll' ,() =>{
     navWrapper.classList.remove('active')
   }
 })
-mobileBtn.addEventListener('click' ,() => {
+mobileBtn?.addEventListener('click' ,() => {
   navMobile.classList.toggle('active')
 })
 destinationsBtn?.addEventListener('click' ,() => {
@@ -159,7 +156,7 @@ const app = {
       if(destination.id !== Number(mainId)) {
         return `
         <div class="swiper-slide">
-          <a href="./destination.html" class="destination" data-index="${destination.id}" onclick="app.saveIndex(${destination.id})" data-aos="fade-${destinationIndex%2==0?'right':'left'}" data-aos-duration="500">
+          <a href="./destination.html" class="destination" data-index="${destination.id}" onclick="app.saveIndex(${destination.id})">
             <div class="destination-img" >
               <img src="./images/destination-img-${destination.id}.webp" alt="">
             </div>
