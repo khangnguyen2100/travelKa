@@ -8,6 +8,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  overflow-x: hidden;
+
+}
 body {
   font-family: 'Roboto', sans-serif;
   color : $text-color;
@@ -79,6 +83,9 @@ a {
   .btn-bg{
     padding: 10px 20px;
     font-size: 16px;
+  }
+  .heading {
+    font-size: 22px;
   }
 }
 @include repons(480px) {

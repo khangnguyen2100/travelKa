@@ -10,12 +10,12 @@
   transition: all .3s ease;
 }
 .nav-wrapper.active {
-  background-color: #fff;
+  background-color: #fafafa;
   padding-top: 10px;
   padding-bottom: 10px;
   top: 0;
   transition: all .3s ease;
-  
+  z-index: 500;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
@@ -36,7 +36,7 @@
 
 }
 .nav-item:not(:last-child){
-  margin-right: 65px;
+  margin-right: 50px;
 }
 .nav-link{
   font-size: 20px;
@@ -64,12 +64,56 @@
   width: 100%;
 }
 
+.mobile-btn {
+  font-size: 32px;
+  color : $heading-color;
+  cursor: pointer;
+  display: none;
+  z-index: 550;
+  position: relative;
+}
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 55vw;
+  background-color: #fafafa;
+  z-index: 100;
+  padding-top: 70px;
+  padding-left: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  .nav-list {
+    margin-left: 20px;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  } 
+  .nav-item:not(:last-child){
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(130%);
+  transition: all .4s ease-in-out;
+}
+.nav-mobile.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: all .4s ease-in-out;
+}
 @include repons(1024px) {
   
 }
 @include repons(768px) {
-  .nav-list {
+  .navigation-list {
     display: none;
+  }
+  .mobile-btn {
+    display: inline-block;
   }
 }
 @include repons(480px) {

@@ -83,13 +83,17 @@ const destinationsContent = document.querySelector('.destinations-content')
 const navWrapper = document.querySelector('.nav-wrapper')
 const destinationsBtn = document.querySelector('.destinations-btn')
 const destinationContainer = document.querySelector('.destination-container')
-
+const mobileBtn = document.querySelector('.mobile-btn')
+const navMobile = document.querySelector('.nav-mobile')
 window.addEventListener('scroll' ,() =>{ 
   if(window.scrollY > 15) {
     navWrapper.classList.add('active')
   } else {
     navWrapper.classList.remove('active')
   }
+})
+mobileBtn.addEventListener('click' ,() => {
+  navMobile.classList.toggle('active')
 })
 destinationsBtn?.addEventListener('click' ,() => {
   if(destinationIndex <= destinations.length) {
@@ -102,7 +106,7 @@ destinationsBtn?.addEventListener('click' ,() => {
 const app = {
   destinationsRenderHandle : function() {
     const htmls = `
-        <a href="./destination.html" class="destination" data-index="${destinations[destinationIndex].id}" onclick="app.saveIndex(${destinations[destinationIndex].id})" data-aos="fade-${destinationIndex%2==0?'right':'left'}" data-aos-duration="500">
+        <a href="./destination.html" class="destination" data-index="${destinations[destinationIndex].id}" onclick="app.saveIndex(${destinations[destinationIndex].id})">
           <div class="destination-img" >
             <img src="./images/destination-img-${destinations[destinationIndex].id}.webp" alt="">
           </div>

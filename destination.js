@@ -5,7 +5,14 @@ window.addEventListener('load' ,() => {
 })
 const swiper = new Swiper('.swiper', {
   loop: true,
-  slidesPerView: 3,
+  breakpoints : {
+    '480' : {
+      slidesPerView: 1,
+    },
+    '768' : {
+        slidesPerView: 3,
+    },
+  },
   spaceBetween: 20,
   observer: true,
   scrollbar: {
